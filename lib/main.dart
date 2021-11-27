@@ -3,8 +3,7 @@ import 'widgets/books_list.dart';
 import 'models/book.dart';
 import './widgets/new_book.dart';
 import './widgets/chart.dart';
-import './genres.dart';
-import './data.dart';
+import './models/genres.dart';
 
 List<Book> books = [];
 void main() {
@@ -39,19 +38,24 @@ class _MyHomePageState extends State<MyHomePage> {
   int _selectedIndex = 0;
   List<Book> _bookstoShow() {
     List<Book> selectedBooks = [];
+
     if (_selectedIndex == 0) {
+      //all
       return books;
     } else if (_selectedIndex == 1) {
+      //in progress
       for (Book b in books) {
         if (b.pagesRead != 0 && b.pagesRead != b.pages) selectedBooks.add(b);
       }
       return selectedBooks;
     } else if (_selectedIndex == 2) {
+      //unstarted
       for (Book b in books) {
         if (b.pagesRead == 0) selectedBooks.add(b);
       }
       return selectedBooks;
     } else {
+      //finished
       for (Book b in books) {
         if (b.pagesRead == b.pages) selectedBooks.add(b);
       }

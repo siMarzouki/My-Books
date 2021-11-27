@@ -1,4 +1,4 @@
-import '../genres.dart';
+import 'genres.dart';
 
 //book model
 //in this app the book attribues are unchangeable

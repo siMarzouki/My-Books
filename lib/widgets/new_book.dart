@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
-import '../genres.dart';
+import '../models/genres.dart';
 
 class NewBook extends StatefulWidget {
   final Function addBook;

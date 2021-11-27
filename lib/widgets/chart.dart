@@ -1,7 +1,7 @@
 import '../models/book.dart';
 import 'package:flutter/material.dart';
 import './top_genre.dart';
-import '../genres.dart';
+import '../models/genres.dart';
 
 class Chart extends StatefulWidget {
   final List<Book> books;
